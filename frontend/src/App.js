@@ -20,7 +20,6 @@ import ResetPass from "./components/user/resetPass/ResetPass";
 import Cart from './components/cart/Cart'
 import Shipping from "./components/cart/shipping/Shipping";
 import Confirmorder from "./components/cart/confirmorder/Confirmorder";
-import axios from 'axios'
 import Payment from "./components/cart/payment/Payment";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
@@ -46,21 +45,12 @@ function App() {
   const context = useContext(StatesContext)
   const { setisAuthenticated, setuserInfo, isAuthenticated, setshippingInfo, setcartItem, setorderInfo ,cartItem} = context
   const { data, isFetching } = useLoadUserQuery()
-  const [stripeApiKey, setstripeApiKey] = useState('')
+ 
 
   const datakey = 'pk_test_51LEh52JqDCPVlA6BgC9ne36weALzI9rWWatTWeP9ap83btWoDvaRPOowZyuww0YEZx3VTPpD1p9qEzRqqdoAuYzw00uu2um8g0'
   const [stripePromise, setStripePromise] = useState(() => loadStripe(datakey))
 
 
-
-
-   async function getStripeApiKey(){
-
-  const {data} = await axios.get('http://localhost:5000/api/stripeApiKey')
-
-  setstripeApiKey(data.stripeApiKey)
-
-   }
 
   useEffect(() => {
 
@@ -70,7 +60,7 @@ function App() {
       }
     })
 
-    getStripeApiKey()
+  
 
 
 
