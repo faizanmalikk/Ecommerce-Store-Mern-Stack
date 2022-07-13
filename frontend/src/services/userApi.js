@@ -4,7 +4,7 @@ const UserApiHeaders = {
     'content-type': 'application/json'
 }
 
-const baseUrl = 'https://ecommerceapp01.herokuapp.com/api';
+const baseUrl = 'https://ecomercestore01.herokuapp.com/api';
 
 
 export const AuthenticationApi = createApi({
