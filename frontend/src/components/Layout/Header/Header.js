@@ -9,11 +9,10 @@ import IconButton from '@mui/material/IconButton';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import { Stack, Typography, useMediaQuery } from '@mui/material';
+import { Stack, useMediaQuery } from '@mui/material';
 import StatesContext from '../../../context/StatesContext';
 import Profile from './Profile';
-import { useLoadUserQuery } from '../../../services/userApi';
-import Loader from '../loader/Loader';
+
 
 
 
@@ -152,7 +151,7 @@ const Header = () => {
           <IconButton >
             <Link to={'/search'}>  <Search sx={{ color: 'white' }} style={{ marginTop: `${isAuthenticated ? '10px' : '5px'}` }} /></Link>
           </IconButton>
-          <IconButton   style={{ marginRight: `${isAuthenticated ? '1.5em' : '0'}` }}>
+          <IconButton   style={{ marginRight: `${isAuthenticated ? '1.3em' : '0'}` }}>
          <Link to='/cart' >   <ShoppingCart sx={{ color: 'white'}} style={{ marginTop: `${isAuthenticated ? '10px' : '5px'}` }}/> </Link>
           </IconButton>
 

@@ -161,11 +161,11 @@ useEffect(() => {
                   <Typography fontWeight={'bold'} textAlign={issmallerThan900 && 'center'} variant={'h6'}>  ${productDetails.product.price}</Typography>
                 </Box>
                 <Box display={'flex'} flexDirection={issmallerThan900 ? 'column' : 'row'} j>
-                  <Box display={'flex'} justifyContent={issmallerThan900 && 'center'}>
-                    <StyledButton component={'button'} fontWeight='bold' onClick={decreaseQuantity}>-</StyledButton>
+                <Box display={'flex'} justifyContent={issmallerThan900 && 'center'}>
+                    <StyledButton component={'button'} fontWeight='bold' onClick={decreaseQuantity}><Typography>-</Typography></StyledButton>
 
-                    <StyledInput>{quantity}</StyledInput>
-                    <StyledButton component={'button'} onClick={increaseQuantity}>+</StyledButton>
+                    <StyledInput><Typography>{quantity}</Typography></StyledInput>
+                    <StyledButton component={'button'} onClick={increaseQuantity}><Typography>+</Typography></StyledButton>
                   </Box>
                   <CartButton onClick={cartControl} onMouseOut={() => setaddedtocard(false)} disabled={productDetails.product.stock < 1 ? true : false}>Add to Cart</CartButton>
                   {addedtocard && <Alertshai severity={'success'} text={'Item Added To Cart'} />}

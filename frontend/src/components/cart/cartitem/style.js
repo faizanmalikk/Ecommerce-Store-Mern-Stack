@@ -1,35 +1,41 @@
 import { Box, Button, styled, Typography } from "@mui/material"
 
 
-  const StyledButtonCart = styled(Typography)(({ theme }) => ({
-    backgroundColor : 'rgba(0, 0, 0, 0.778)',
-    color : 'white',
-    border : 'none',
-    width : '1.5em',
-    height: '1.5em',
-   
-    '&:hover' :{
-      backgroundColor : 'rgba(0, 0, 0, 0.878)',
-      cursor : 'pointer'
-  
-    },
-    [theme.breakpoints.down('sm')]:{
-      width : '1em',
-      height: '1em',
-      paddingBottom:'33px',
-    }
-  }))
-
-const StyledInputCart = styled(Typography)(({ theme }) => ({
+const StyledButtonCart = styled(Box)(({ theme }) => ({
+  display:'flex',
+  justifyContent:'center',
+  alignItems:'center',
+  backgroundColor : 'rgba(0, 0, 0, 0.778)',
+  color : 'white',
+  border : 'none',
+  width : '1.5em',
+  height: '1.5em',
  
-  height : '1.42em',
+  '&:hover' :{
+    backgroundColor : 'rgba(0, 0, 0, 0.878)',
+    cursor : 'pointer'
 
-  padding : '0 0.7em',
+  },
   [theme.breakpoints.down('sm')]:{
-    padding : '0 0.3em',
-
-
+    width : '1em',
+    height: '1em',
+   
   }
+}))
+
+const StyledInputCart = styled(Box)(({ theme }) => ({
+
+height : '1.5em',
+padding : '0 0.5em',
+display:'flex',
+justifyContent:'center',
+alignItems:'center',
+[theme.breakpoints.down('sm')]:{
+  padding : '0 0.3em',
+  height: '1em'
+
+
+}
 }))
 
 

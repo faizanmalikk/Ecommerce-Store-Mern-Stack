@@ -1,11 +1,11 @@
-import React,{ useState, useContext } from 'react';
+import React,{ useState, useContext, useEffect } from 'react';
 import StatesContext from '../../../context/StatesContext';
 import { Avatar, Backdrop,Box,SpeedDial , SpeedDialAction} from '@mui/material';
 import profile from '../../../assets/Profile.png'
 import { Dashboard, ListAlt, ExitToApp, PermIdentity } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom'
-import { useLoadUserQuery, useLogoutUserMutation } from '../../../services/userApi';
-import Loader from '../loader/Loader';
+import {  useLogoutUserMutation } from '../../../services/userApi';
+
 
 
 export default function BasicSpeedDial() {
@@ -14,8 +14,8 @@ export default function BasicSpeedDial() {
   const { userInfo, setisAuthenticated, setuserInfo } = context
 
   const navigate = useNavigate();
-  const [logout, info] = useLogoutUserMutation()
-  const {data , isFetching} = useLoadUserQuery()
+  const [logout, response] = useLogoutUserMutation()
+
 
   
   const [open, setopen] = useState(false)
@@ -39,13 +39,14 @@ export default function BasicSpeedDial() {
   }
 
   const LogoutUser = () => {
-
-    logout()
+    
     setisAuthenticated(false)
     setuserInfo(null)
     navigate('/login')
     setopen(false)
-    window.location.reload()
+  
+    logout()
+   
    
   }
 
@@ -61,21 +62,21 @@ export default function BasicSpeedDial() {
     actions.unshift({ icon: <Dashboard />, name: 'Dashboard', func: dashboard })   
   }
 
-  
 
 
   return (
     <>
-{!data ? (<Loader/>) : (
+{ userInfo && (
   
-      <Box component='span' sx={{ position: 'absolute', top: 6, right: 7 }} >
+      <Box component='span' sx={{ position: 'absolute', top: 15, right: 7 }} >
 
         <Backdrop open={open} onClick={() => setopen(false)} sx={{ zIndex: '9' }} />
         <SpeedDial
      
           ariaLabel="SpeedDial tooltip example"
-          onOpen={() => setopen(true)}
+          onClick={()=>setopen(!open)}
           open={open}
+          FabProps={{size:'small'}}
           direction="down"
           icon={<Avatar src={userInfo.user.avatar.url ? userInfo.user.avatar.url : profile} />}
         >

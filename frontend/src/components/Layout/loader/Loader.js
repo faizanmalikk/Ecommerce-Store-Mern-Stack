@@ -7,10 +7,10 @@ const Loader = () => {
 
   return (
     <Box display={'flex'} justifyContent='center' 
-   alignItems={'center'} height={'100vh'} >
-        
-        <CircularProgress size={90}/>
-    </Box>
+    alignItems={'center'} height={'95vh'} >
+         
+         <CircularProgress size = {80}/>
+     </Box>
   )
 }
 

@@ -29,7 +29,7 @@ const Alertshai = ({ severity, text }) => {
 
         <>
             <StyledBox >
-                <Box display={open == false || isLargerThan445 == true ? 'none' : 'flex'}>
+                <Box display={open == false  ? 'none' : 'flex'}>
                     <Alert severity={severity} color={severity} sx={{ borderRadius: '100px', mb: 2 }}
                         action={
                             <IconButton
@@ -56,8 +56,5 @@ const Alertshai = ({ severity, text }) => {
 
     );
 }
-
-
-
 
 export default Alertshai

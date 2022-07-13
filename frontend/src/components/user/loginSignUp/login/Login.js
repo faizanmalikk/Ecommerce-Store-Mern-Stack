@@ -7,7 +7,7 @@ import { useLoginUserMutation } from '../../../../services/userApi'
 import Alertshai from '../../../Layout/Alerts/Alertshai'
 import Loader from '../../../Layout/loader/Loader'
 import { ForgotPass } from '../style'
-import Cookies from 'js-cookie'
+
 
 
 const LoginForm = () => {
@@ -52,14 +52,15 @@ const LoginForm = () => {
 
         if (responseInfo.status === 'fulfilled') {
 
+           
             setisAuthenticated(true)
-            setuserInfo(responseInfo.data)            
+            setuserInfo(responseInfo.data)
         
         }
 
       
 
-    }, [responseInfo, isAuthenticated])
+    }, [responseInfo])
 
 
 

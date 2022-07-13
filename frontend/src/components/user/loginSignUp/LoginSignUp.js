@@ -5,6 +5,7 @@ import LoginForm from './login/Login'
 import RegisterForm from './resgister/Register'
 import { useNavigate,useLocation } from 'react-router-dom'
 import StatesContext from '../../../context/StatesContext'
+import MetaData from '../../Layout/MetaData'
 
 
 const LoginSignUp = () => {
@@ -13,7 +14,7 @@ const LoginSignUp = () => {
   const { isAuthenticated } = context
   const [Login, setLogin] = useState(true)
   const navigate = useNavigate()
-  const location = useLocation()
+
   const { search } = useLocation();
 
 
@@ -31,7 +32,7 @@ const redirect = search ? search.split("=")[1] : "/account";
 
   return (
     <>
-
+    <MetaData title={'Login - Resgister'} />
       <StyledBox >
 
 

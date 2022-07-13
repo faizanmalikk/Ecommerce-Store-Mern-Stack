@@ -1,4 +1,4 @@
-import React, {  useContext,useState } from 'react'
+import React, {  useContext } from 'react'
 import { Box, Button, Typography } from '@mui/material'
 import MetaData from '../../Layout/MetaData'
 import { ProfileContainer, ProfileInfo, StyledBox, StyledImage } from './style'

@@ -4,7 +4,7 @@ const productApiHeaders = {
     'content-type': 'application/json'
 }
 
-const baseUrl = 'https://ecommerceapp01.herokuapp.com/api';
+const baseUrl = 'https://ecommercebackend01.herokuapp.com/api';
 
 const createRequest = (url) => ({ url, headers: productApiHeaders })
 

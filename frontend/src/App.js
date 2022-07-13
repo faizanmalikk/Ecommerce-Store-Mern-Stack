@@ -9,7 +9,7 @@ import Products from "./components/Products/Products";
 import Search from "./components/search/Search";
 import LoginSignUp from "./components/user/loginSignUp/LoginSignUp";
 import Account from './components/user/profile/Account'
-import { useLoadUserQuery } from "./services/userApi";
+
 import StatesContext from "./context/StatesContext";
 import ProtectedRoute from "./components/route/ProtectedRoute";
 import { Fragment } from "react";
@@ -39,12 +39,13 @@ import ProductReviews from "./components/admin/productReviews/ProductReviews";
 import Contact from "./components/conatct/Contact";
 import About from "./components/about/About";
 import NotFound from "./components/Layout/notFound/NotFound";
+import { useLoadUserQuery } from "./services/userApi";
 
 
 function App() {
   const context = useContext(StatesContext)
   const { setisAuthenticated, setuserInfo, isAuthenticated, setshippingInfo, setcartItem, setorderInfo ,cartItem} = context
-  const { data, isFetching } = useLoadUserQuery()
+  const { data,isFetching } = useLoadUserQuery()
  
 
   const datakey = 'pk_test_51LEh52JqDCPVlA6BgC9ne36weALzI9rWWatTWeP9ap83btWoDvaRPOowZyuww0YEZx3VTPpD1p9qEzRqqdoAuYzw00uu2um8g0'
@@ -60,10 +61,6 @@ function App() {
       }
     })
 
-  
-
-
-
     if (!isFetching) {
 
       if (data && data.user) {
@@ -71,7 +68,7 @@ function App() {
         setuserInfo(data)
       }
     }
-  }, [isFetching, data, isAuthenticated , cartItem])
+  }, [isFetching])
 
   useEffect(() => {
     const retriveProducts = JSON.parse(localStorage.getItem('cartItems'));
@@ -90,7 +87,7 @@ function App() {
   return (
     <Fragment>
 
-      {!isFetching &&
+      {/* {!isFetching && */}
         <>
 
           <Header />
@@ -153,7 +150,8 @@ function App() {
        
 
           <Footer />
-        </>}
+        </>
+        {/* } */}
 
     </Fragment>
 

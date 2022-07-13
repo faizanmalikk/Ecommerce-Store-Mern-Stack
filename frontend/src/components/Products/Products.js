@@ -81,7 +81,7 @@ const Products = () => {
           <Box display={'flex'} flexDirection={{xs:'column-reverse',md:'row'}} >
             <Box paddingTop={{md:'1em'}}>
               <StyledSlider >
-                <Box >
+                <Box display={{xs:'none',md:'block'}}>
                   <Typography fontWeight={'bold'}>Price</Typography>
                   <Slider
                     value={price}
@@ -126,12 +126,12 @@ const Products = () => {
                    <Box display={'flex'} justifyContent='center' 
                    alignItems={'center'} height={'50vh'} >
                         
-                        <CircularProgress size={90}/>
+                        <CircularProgress size={80}/>
                     </Box>
               ) :
                 <Box  display ='flex' flexDirection= 'row' justifyContent={'center'}  flexWrap ='wrap' gap='25px'>
                   {data && data.product.map((product, i) => {
-                    return <Box key={i} width='12.4em'>
+                    return <Box key={i} width={{xs:'95%',sm:'13em',md:'12.4em'}}>
                       <ProductCard product={product} />
                     </Box>
                   })}

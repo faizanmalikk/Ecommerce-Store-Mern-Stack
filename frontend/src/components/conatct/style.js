@@ -77,7 +77,7 @@ const FormContainercontact = styled(Box)(({ theme }) => ({
     width: '100%',
     resize:'none',
     overflow:'hidden',
-    padding:'0.65em 0',
+    padding:'0.6em 0',
     paddingLeft:'2.4em',
     paddingRight:'10px',
     fontSize : '26px',
@@ -97,6 +97,11 @@ const FormContainercontact = styled(Box)(({ theme }) => ({
         color: theme.palette.grey[500],
 
     },
+    [theme.breakpoints.down('sm')]:{
+        fontSize : '20px',
+        paddingLeft:'3em',
+        paddingTop:'18px'
+    }
    
  
  }))

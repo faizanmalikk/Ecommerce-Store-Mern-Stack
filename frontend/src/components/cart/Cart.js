@@ -105,7 +105,7 @@ const Cart = () => {
                         <Box display={'flex'} flexDirection='column' alignItems={'center'} marginTop={{ xs: '50%', sm: '30%', md: '10%' }} textAlign={'center'}>
 
                             <RemoveShoppingCart sx={{ color: '#42a5f5', fontSize: '70px', marginBottom: '10px' }} />
-                            <Typography color='#9e9e9e' fontFamily={'cursive'} fontSize='28px'>No Product in Your Cart</Typography>
+                            <Typography color='#9e9e9e' fontFamily={'Roboto'} fontSize='28px'>No Product in Your Cart</Typography>
                             <Button component={Link} to='/products' variant='contained' sx={{ marginTop: '20px' }}>View Products</Button>
                         </Box>
                     ) : (
@@ -128,8 +128,8 @@ const Cart = () => {
                                 <Box flex={{ xs: '0', sm: '3', md: '4' }}></Box>
                                 <Box  flex='2' marginBottom='3em' borderTop = '5px solid #42a5f5'>
                                     <Box display='flex' justifyContent={'space-between'} marginTop='1em'>
-                                        <Typography color='#9e9e9e' fontFamily={'cursive'}>Gross Total</Typography>
-                                        <Typography color='#9e9e9e' fontFamily={'cursive'}>{`$${cartItem.reduce(
+                                        <Typography color='#9e9e9e' fontFamily={'Roboto'}>Gross Total</Typography>
+                                        <Typography color='#9e9e9e' fontFamily={'Roboto'}>{`$${cartItem.reduce(
                                             (acc, item) => acc + item.quantity * item.productDetails.product.price,
                                             0
                                         )}`}</Typography>

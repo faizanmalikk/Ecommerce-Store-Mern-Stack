@@ -2,7 +2,7 @@ import { Box, Button, InputAdornment, TextField, Typography } from '@mui/materia
 import React, { useRef, useState } from 'react'
 import MetaData from '../Layout/MetaData'
 import { ContactCard, FormContainercontact, FormHeadingcontact, StyledBoxcontact, StyledDescription } from './style'
-import { ChatBubbleOutline, Description, Facebook, MailOutline, MessageOutlined, Person, WhatsApp } from '@mui/icons-material'
+import {  Facebook, MailOutline, MessageOutlined, Person, WhatsApp } from '@mui/icons-material'
 import emailjs from '@emailjs/browser';
 import Alertshai from '../Layout/Alerts/Alertshai'
 
@@ -30,11 +30,11 @@ const Contact = () => {
                     <Box padding={{sm:'2em'}} display={'flex'} flexDirection='column' gap='20px'>
                         <ContactCard>
                             <MailOutline sx={{ color: '#01579b' }} />
-                            <Typography fontFamily='cursive' fontWeight={'bold'} >Email</Typography>
-                            <Typography fontFamily='cursive' fontSize={{xs:'20px',sm:'23px'}} textOverflow='ellipsis' whiteSpace={'nowrap'} overflow={'hidden'}>Faizanjamil656@gmail.com</Typography>
+                            <Typography fontFamily='Roboto' fontWeight={'bold'} >Email</Typography>
+                            <Typography fontFamily='Roboto' fontSize={{xs:'20px',sm:'23px'}} textOverflow='ellipsis' whiteSpace={'nowrap'} overflow={'hidden'}>Faizanjamil656@gmail.com</Typography>
                             <Typography component={'a'}
                                 href='https://mail.google.com/mail/?view=cm&fs=1&to=faizanjamil656@gmail.com' target={'_blank'}
-                                fontFamily='cursive' color='#0288d1'
+                                fontFamily='Roboto' color='#0288d1'
                                 sx={{
                                     cursor: 'pointer', transition: 'all 0.4s ease', textDecoration: 'none'
                                     , '&:hover': { color: '#01579b' }
@@ -44,10 +44,10 @@ const Contact = () => {
                         </ContactCard>
                         <ContactCard>
                             <Facebook sx={{ color: '#01579b' }} />
-                            <Typography fontFamily='cursive' fontWeight={'bold'} >Facebook</Typography>
-                            <Typography fontFamily='cursive' >Faizan MaLik</Typography>
+                            <Typography fontFamily='Roboto' fontWeight={'bold'} >Facebook</Typography>
+                            <Typography fontFamily='Roboto' >Faizan MaLik</Typography>
                             <Typography component={'a'} href='https://m.me/faizan.malyk66' target={'_blank'}
-                                fontFamily='cursive' color='#0288d1'
+                                fontFamily='Roboto' color='#0288d1'
                                 sx={{
                                     cursor: 'pointer', transition: 'all 0.4s ease', textDecoration: 'none'
                                     , '&:hover': { color: '#01579b' }
@@ -57,9 +57,9 @@ const Contact = () => {
                         </ContactCard>
                         <ContactCard>
                             <WhatsApp sx={{ color: 'green' }} />
-                            <Typography fontFamily='cursive' fontWeight={'bold'} >Whats-App</Typography>
-                            <Typography fontFamily='cursive'>+92-321-3193023</Typography>
-                            <Typography component={'a'} fontFamily='cursive' color='#0288d1'
+                            <Typography fontFamily='Roboto' fontWeight={'bold'} >Whats-App</Typography>
+                            <Typography fontFamily='Roboto'>+92-321-3193023</Typography>
+                            <Typography component={'a'} fontFamily='Roboto' color='#0288d1'
                                 href='https://wa.me/+923213193023' target={'_blank'}
                                 sx={{
                                     cursor: 'pointer', transition: 'all 0.4s ease', textDecoration: 'none'

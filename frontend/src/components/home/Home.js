@@ -22,6 +22,7 @@ useEffect(() => {
   return (
     <>
 
+
       {error && <Alertshai severity={'error'} text={error.data.message} />}
      {isFetching ? <Loader/> : (
             <Box >
@@ -52,7 +53,7 @@ useEffect(() => {
               <StyledBox >
              
                 {data && data.product.map((product, i) => {
-                  return <Box key={i} width='13em' display={i>7 && 'none'}>
+                  return <Box key={i}width={{xs:'95%',sm:'14em',md:'13em'}} display={i>7 && 'none'}>
                     <ProductCard product={product} />
                   </Box>
                 })}

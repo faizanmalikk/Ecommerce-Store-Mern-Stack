@@ -23,20 +23,34 @@ import { Box, styled, Typography,Input, TextField, Button, Card, TextareaAutosiz
 
 
 
-  const StyledButton = styled(Typography)(({ theme }) => ({
-    backgroundColor : 'rgba(0, 0, 0, 0.778)',
-    color : 'white',
-    border : 'none',
-    width : '1.5em',
-    height: '1.5em',
-    '&:hover' :{
-      backgroundColor : 'rgba(0, 0, 0, 0.878)',
-      cursor : 'pointer'
-  
-    },
-   
-   
+ 
+const StyledButton = styled(Box)(({ theme }) => ({
+  display:'flex',
+  justifyContent:'center',
+  alignItems:'center',
+  backgroundColor : 'rgba(0, 0, 0, 0.778)',
+  color : 'white',
+  border : 'none',
+  width : '1.5em',
+  height: '1.5em',
+  '&:hover' :{
+    backgroundColor : 'rgba(0, 0, 0, 0.878)',
+    cursor : 'pointer'
+
+  },
+ 
+ 
 }))
+
+
+const StyledInput =styled(Box)({
+display:'flex',
+justifyContent:'center',
+alignItems:'center',
+height : '1.5em',
+padding : '0 0.5em',
+
+})
   const CartButton = styled(Button)(({ theme }) => ({
     color : 'white',
    backgroundColor : 'tomato',
@@ -59,14 +73,6 @@ import { Box, styled, Typography,Input, TextField, Button, Card, TextareaAutosiz
    
    
 }))
-
-  const StyledInput =styled(Typography)({
-      height : '1.42em',
-    padding : '0 0.7em',
-
-  })
-
-
 
 
   const StyledStatus = styled(Box)(({ theme }) => ({

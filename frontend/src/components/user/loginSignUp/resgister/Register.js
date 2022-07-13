@@ -71,7 +71,7 @@ const RegisterForm = () => {
             setisAuthenticated(true)
             setuserInfo(response.data)            
           }
-    }, [response, isAuthenticated])
+    }, [response])
 
 
     return (
