@@ -190,7 +190,7 @@ useEffect(() => {
             open={open}
             onClose={submitReviewToggle}
           >
-            <DialogTitle textAlign={'center'} fontFamily='cursive'>Submit Review</DialogTitle>
+            <DialogTitle textAlign={'center'} fontFamily='Roboto'>Submit Review</DialogTitle>
             <DialogContent sx={{display:'flex',flexDirection:'column',justifyContent:'center'}}>
             <Rating
               value={ratings}

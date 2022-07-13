@@ -36,7 +36,7 @@ const FormContainer = styled(Box)(({ theme }) => ({
 const FormHeading = styled(Typography)(({ theme }) => ({
 
     fontSize: '23px',
-    fontFamily: 'cursive',
+    fontFamily: 'Roboto',
     cursor: 'pointer',
     color: theme.palette.grey[700],
     paddingBottom: '10px',
@@ -71,7 +71,7 @@ const InputFile = styled(Box)({
     color : 'rgba(0,0,0,0.616)',
     backgroundColor : 'white',
     transition : 'all 0.5s',
-    font : '400 1em cursive'
+    font : '400 1em Roboto'
 },
 
 '&::file-selector-button:hover':{

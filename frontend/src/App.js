@@ -87,7 +87,7 @@ function App() {
   return (
     <Fragment>
 
-      {/* {!isFetching && */}
+      {!isFetching &&
         <>
 
           <Header />
@@ -151,7 +151,7 @@ function App() {
 
           <Footer />
         </>
-        {/* } */}
+         } 
 
     </Fragment>
 

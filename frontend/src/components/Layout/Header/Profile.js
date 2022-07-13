@@ -68,7 +68,7 @@ export default function BasicSpeedDial() {
     <>
 { userInfo && (
   
-      <Box component='span' sx={{ position: 'absolute', top: 15, right: 7 }} >
+      <Box component='span' sx={{ position: 'absolute', right: 7,top:{xs:10,sm:15} }} >
 
         <Backdrop open={open} onClick={() => setopen(false)} sx={{ zIndex: '9' }} />
         <SpeedDial

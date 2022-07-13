@@ -25,7 +25,7 @@ const FormHeadingUpdatePass = styled(Typography)(({ theme }) => ({
     fontSize: '30px',
     paddingTop : '19px',
     borderBottom : '1px solid rgba(0,0,0,0.216)',
-    fontFamily: 'cursive',
+    fontFamily: 'Roboto',
     cursor: 'pointer',
     color: theme.palette.grey[700],
     paddingBottom: '10px',
@@ -62,7 +62,7 @@ const InputFileUpdatePass = styled(Box)({
         color : 'rgba(0,0,0,0.616)',
         backgroundColor : 'white',
         transition : 'all 0.5s',
-        font : '400 1em cursive'
+        font : '400 1em Roboto'
     },
     
     '&::file-selector-button:hover':{

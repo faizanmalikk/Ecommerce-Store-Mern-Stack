@@ -6,6 +6,7 @@ const productApiHeaders = {
 
 const baseUrl = 'https://ecomercestore01.herokuapp.com/api';
 
+
 const createRequest = (url) => ({ url, headers: productApiHeaders })
 
 export const productsApi = createApi({
