@@ -32,7 +32,7 @@ justifyContent:'center',
 alignItems:'center',
 [theme.breakpoints.down('sm')]:{
   padding : '0 0.3em',
-  height: '1em'
+  height: '20px',
 
 
 }

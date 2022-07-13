@@ -60,8 +60,8 @@ const FormContainercreate = styled(Box)(({ theme }) => ({
 const StyledDescription = styled(TextareaAutosize)(({ theme }) => ({
     width: '100%',
     resize:'none',
-    padding:'0.65em 0',
-    paddingLeft:'2.4em',
+    padding:'15px 0',
+    paddingLeft:'59px',
     paddingRight:'10px',
     fontSize : '26px',
     color: theme.palette.grey[800],
@@ -79,7 +79,13 @@ const StyledDescription = styled(TextareaAutosize)(({ theme }) => ({
     '&::placeholder':{
         color: theme.palette.grey[500],
 
+    },
+    [theme.breakpoints.down('sm')]:{
+        padding:'16px 0',
+        fontSize : '20px',
+        paddingLeft:'62px',
     }
+    
  
  }))
 

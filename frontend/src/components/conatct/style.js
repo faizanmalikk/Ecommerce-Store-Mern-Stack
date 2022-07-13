@@ -36,7 +36,7 @@ const FormHeadingcontact = styled(Typography)(({ theme }) => ({
     fontSize: '30px',
     paddingTop : '19px',
     borderBottom : '1px solid rgba(0,0,0,0.216)',
-    fontFamily: 'cursive',
+    fontFamily: 'Roboto',
     cursor: 'pointer',
     color: theme.palette.grey[700],
     paddingBottom: '10px',
@@ -77,8 +77,8 @@ const FormContainercontact = styled(Box)(({ theme }) => ({
     width: '100%',
     resize:'none',
     overflow:'hidden',
-    padding:'0.6em 0',
-    paddingLeft:'2.4em',
+    padding:'15px 0',
+    paddingLeft:'59px',
     paddingRight:'10px',
     fontSize : '26px',
     color: theme.palette.grey[800],
@@ -99,7 +99,7 @@ const FormContainercontact = styled(Box)(({ theme }) => ({
     },
     [theme.breakpoints.down('sm')]:{
         fontSize : '20px',
-        paddingLeft:'3em',
+        paddingLeft:'62px',
         paddingTop:'18px'
     }
    
