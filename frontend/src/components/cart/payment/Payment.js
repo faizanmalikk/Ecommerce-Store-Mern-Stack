@@ -80,7 +80,7 @@ const Payment = () => {
       }
 
       const { data } = await axios.post(
-        'http://localhost:5000/api/payment/process',
+        'https://ecomercestore01.herokuapp.com/api/payment/process',
         paymentData,
         config
 

@@ -31,8 +31,8 @@ const StyledButton = styled(Box)(({ theme }) => ({
   backgroundColor : 'rgba(0, 0, 0, 0.778)',
   color : 'white',
   border : 'none',
-  width : '1.5em',
-  height: '1.5em',
+  width : '24px',
+  height: '24px',
   '&:hover' :{
     backgroundColor : 'rgba(0, 0, 0, 0.878)',
     cursor : 'pointer'

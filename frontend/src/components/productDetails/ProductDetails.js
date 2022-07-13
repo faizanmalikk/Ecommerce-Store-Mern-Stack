@@ -150,7 +150,7 @@ useEffect(() => {
                 <Box >
                   <Box textAlign={issmallerThan900 && 'center'}>
                     <Typography fontWeight={'550'} >{productDetails.product.name}</Typography>
-                    <Typography color='rgba(0, 0, 0, 0.678)' fontSize={'15px'}>Product # {id}</Typography>
+                    <Typography color='rgba(0, 0, 0, 0.678)' fontSize={{xs:'10px',sm:'15px'}}>Product # {id}</Typography>
                   </Box>
                   <StyledRatings  >
                     <Rating precision={0.5} name="read-only" size={'small'} value={productDetails.product.ratings} readOnly  />

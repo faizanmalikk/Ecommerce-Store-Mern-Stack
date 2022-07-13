@@ -17,8 +17,8 @@ const StyledButtonCart = styled(Box)(({ theme }) => ({
 
   },
   [theme.breakpoints.down('sm')]:{
-    width : '1em',
-    height: '1em',
+    width : '20px',
+    height: '20px',
    
   }
 }))
