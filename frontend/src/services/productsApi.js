@@ -4,8 +4,8 @@ const productApiHeaders = {
     'content-type': 'application/json'
 }
 
-const baseUrl = 'https://ecomercestore01.herokuapp.com/api';
-
+const baseUrl = 'https://ecommerce-store-mern-stack.vercel.app/api';
+// const baseUrl = 'http://localhost:4000/api';
 
 
 const createRequest = (url) => ({ url, headers: productApiHeaders })
@@ -41,7 +41,6 @@ export const productsApi = createApi({
 
                         createRequest(`/products?page=${Page}&price[gte]=${price[0]}&price[lte]=${price[1]}&ratings[gte]=${ratings}`),
 
-            // transformResponse : res => res.sort((a,b)=> b.id - a.id)
             providesTags: ['ProductsOrders'],
             
 

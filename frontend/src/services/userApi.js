@@ -4,9 +4,8 @@ const UserApiHeaders = {
     'content-type': 'application/json'
 }
 
-const baseUrl = 'https://ecomercestore01.herokuapp.com/api';
-
-
+const baseUrl = 'https://ecommerce-store-mern-stack.vercel.app/api';
+// const baseUrl = 'http://localhost:4000/api';
 
 
 export const AuthenticationApi = createApi({

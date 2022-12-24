@@ -9,13 +9,13 @@ const ProductCard = ({ product }) => {
   return (
 
     <Link to={`/product/${product._id}`} style={{ textDecoration: 'none' }}>
-      <Card sx={{ '&:hover': { transform: 'translateY(-1vmax)', transition: 'all 0.5s' } }}  >
+      <Card sx={{ borderRadius: '15px', '&:hover': { transform: 'translateY(-1vmax)', transition: 'all 0.5s' } }}  >
         <CardActionArea>
           <Box
 
             component='img'
             src={product.images[0].url}
-            sx={{ height: { xs: '440px', sm: '370px' } }}
+            sx={{ height: { xs: '440px', sm: '270px' } }}
             width='100%'
             alt={product.name}
           ></Box>

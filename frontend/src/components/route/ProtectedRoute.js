@@ -5,7 +5,7 @@ import StatesContext from '../../context/StatesContext'
 
 
 
-const ProtectedRoute = (props) => {
+const ProtectedRoute = () => {
   
 
     const context = useContext(StatesContext)

@@ -22,7 +22,8 @@ const StyledBox = styled(Box)(({ theme }) => ({
 }))
 const FormContainer = styled(Box)(({ theme }) => ({
    margin:'auto',
-    width: '50vh',
+    width: '500px',
+    borderRadius : '15px',
     backgroundColor: 'white',
     height: 'auto',
 

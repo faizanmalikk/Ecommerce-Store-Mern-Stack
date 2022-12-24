@@ -21,7 +21,7 @@ import { useCreateOrderMutation } from '../../../services/productsApi';
 const Payment = () => {
 
   const context = useContext(StatesContext)
-  const { orderInfo, shippingInfo, cartItem, userInfo, setorderInfo  } = context
+  const { orderInfo, shippingInfo, cartItem, userInfo, setorderInfo } = context
 
   const [newOrder, responseInfo] = useCreateOrderMutation()
   const [error, seterror] = useState()
@@ -61,7 +61,7 @@ const Payment = () => {
         }
       )),
 
-     
+
       itemsPrice: orderInfo.subtotal,
       taxPrice: orderInfo.tax,
       shippingPrice: orderInfo.shippingCharges,
@@ -80,7 +80,7 @@ const Payment = () => {
       }
 
       const { data } = await axios.post(
-        'https://ecomercestore01.herokuapp.com/api/payment/process',
+        'https://ecommerce-store-mern-stack.vercel.app/api/payment/process',
         paymentData,
         config
 
@@ -119,7 +119,7 @@ const Payment = () => {
           }
           newOrder(order)
           navigate('/success')
-   
+
         } else {
           seterror('There is some issue while processing payment')
         }

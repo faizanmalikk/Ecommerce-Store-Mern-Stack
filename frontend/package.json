@@ -63,5 +63,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy":"https://ecommerceapp01.herokuapp.com"
+  "proxy": "https://ecommerce-store-mern-stack.vercel.app"
 }

@@ -8,15 +8,16 @@ import { useGetAllProductsQuery } from '../../services/productsApi';
 import Loader from '../Layout/loader/Loader';
 import Alertshai from '../Layout/Alerts/Alertshai';
 import ProductCard from './ProductCard';
+import ImageScrollbar from './ImageScrollbar';
 
 const Home = () => {
   const Page = 1
-   
+
   const { data, isFetching, error } = useGetAllProductsQuery(Page)
 
-useEffect(() => {
-  window.scrollTo(0, 0)
-}, [])
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
 
   return (
@@ -24,12 +25,12 @@ useEffect(() => {
 
 
       {error && <Alertshai severity={'error'} text={error.data.message} />}
-     {isFetching ? <Loader/> : (
-            <Box >
+      {isFetching ? <Loader /> : (
+        <Box >
 
-            <MetaData title='ECOMMERCE' />
-    
-            <Banner className='banner'>
+          <MetaData title='ECOMMERCE' />
+
+          {/* <Banner className='banner'>
     
               <Typography sx={{ fontSize: { xs: '14px', sm: '17px' }, paddingBottom: { xs: '20px', sm: '32px' } }}>Welcome to Ecommerce</Typography>
     
@@ -41,27 +42,28 @@ useEffect(() => {
               <StyledButton href='#container' variant="outlined" endIcon={<MouseOutlined />} >
                 Scroll
               </StyledButton>
-            </Banner>
-          
-    
-            <Box marginTop={3} display='flex' justifyContent={'center'} id={'container'}>
-              <HomeHeading>Featured Products</HomeHeading>
-            </Box>
-    
-            
-                
-              <StyledBox >
-             
-                {data && data.product.map((product, i) => {
-                  return <Box key={i}width={{xs:'95%',sm:'14em',md:'13em'}} display={i>7 && 'none'}>
-                    <ProductCard product={product} />
-                  </Box>
-                })}
-              </StyledBox>
-           
+            </Banner> */}
+
+          <ImageScrollbar />
+
+          <Box marginTop='130px' display='flex' justifyContent={'center'} id={'container'}>
+            <HomeHeading>Featured Products</HomeHeading>
           </Box>
 
-     )}
+
+
+          <StyledBox >
+
+            {data && data.product.map((product, i) => {
+              return <Box key={i} width={{ xs: '95%', sm: '14em', md: '13em' }} display={i > 7 && 'none'}>
+                <ProductCard product={product} />
+              </Box>
+            })}
+          </StyledBox>
+
+        </Box>
+
+      )}
 
 
 
