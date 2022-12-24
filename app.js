@@ -48,7 +48,7 @@ app.get('*',(req,res)=>{
   res.sendFile(path.resolve(__dirname,'./frontend/build/index.html'))
 })
 
-// Middleware for errors
+// Middleware for erro
 app.use(errorMiddleware)
 
 module.exports = app
