@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.51638b15.css",
+    "main.js": "/static/js/main.0af8d1d1.js",
+    "static/media/slide2.png": "/static/media/slide2.79281e5b109e858c2259.png",
+    "static/media/slide1.png": "/static/media/slide1.e56d9e006c67c63fc834.png",
+    "static/media/cover.jfif": "/static/media/cover.e2edeab17643ab2951c0.jfif",
+    "static/media/character.jpg": "/static/media/character.4da5312cea42baff5ee6.jpg",
+    "static/media/Profile.png": "/static/media/Profile.697fdcd21f6d157b9073.png",
+    "static/media/playstore.png": "/static/media/playstore.82b4831979e0ce7c733e.png",
+    "static/media/Appstore.png": "/static/media/Appstore.d0c5839937e3c36285f6.png",
+    "static/media/slide4.webp": "/static/media/slide4.338be47c905ab1dc1e39.webp",
+    "index.html": "/index.html",
+    "main.51638b15.css.map": "/static/css/main.51638b15.css.map",
+    "main.0af8d1d1.js.map": "/static/js/main.0af8d1d1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.51638b15.css",
+    "static/js/main.0af8d1d1.js"
+  ]
+}
